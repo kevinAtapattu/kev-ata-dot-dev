@@ -1,0 +1,15 @@
+import HeroSection from "../components/sections/HeroSection";
+import ExperienceTimeline from "../components/sections/ExperienceTimeline";
+import ProjectGrid from "../components/sections/ProjectGrid";
+import ContactForm from "../components/sections/ContactForm";
+
+export default function HomePage() {
+  return (
+    <main className="container mx-auto flex flex-col gap-20 px-4 py-16">
+      <HeroSection />
+      <ExperienceTimeline />
+      <ProjectGrid />
+      <ContactForm />
+    </main>
+  );
+}
