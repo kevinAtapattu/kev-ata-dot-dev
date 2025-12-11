@@ -14,9 +14,9 @@ export default function HeroSection() {
       <div className="flex items-center justify-between gap-6">
         <div className="space-y-6">
           <p className="text-sm uppercase tracking-[0.6em] text-white/60">{siteConfig.tagline}</p>
-          <h1 className="text-5xl font-semibold">Kevin Ata</h1>
+          <h1 className="text-5xl font-semibold">Hi, I'm Kevin Atapattu</h1>
           <p className="text-lg text-white/70">
-            Crafting dynamic, fluid interfaces with performance-first engineering and a taste for cinematic interactions.
+            Always: learning, building, & improving.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button>View Work</Button>

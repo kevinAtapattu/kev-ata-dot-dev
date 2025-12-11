@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Kevin Ata",
-  tagline: "Building sleek, immersive web experiences",
-  location: "Remote / Toronto, CA",
+  name: "Kevin Atapattu",
+  tagline: "Passion for building goated products",
+  location: "SWE Intern @ IBM Toronto, CS @ Carleton University",
   socials: {
-    github: "https://github.com/kevin",
-    linkedin: "https://linkedin.com/in/kevin",
-    email: "hello@kevin.app"
+    github: "https://github.com/kevinAtapattu",
+    linkedin: "https://www.linkedin.com/in/kevinatapattu/",
+    email: "kevinatapattu@gmail.com"
   }
 };
