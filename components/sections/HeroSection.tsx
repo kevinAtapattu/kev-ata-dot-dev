@@ -17,8 +17,8 @@ export default function HeroSection() {
             Software Engineer, Powerlifter, Caffeine Enthusiast.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button>View Work</Button>
-            <Button variant="ghost">Resume</Button>
+            <Button as="a" href="https://github.com/kevinAtapattu" target="_blank" rel="noopener noreferrer">View Work</Button>
+            <Button as="a" href="/kevin_atapattu_resume.pdf" target="_blank" rel="noopener noreferrer" variant="ghost">Resume</Button>
           </div>
         </div>
         <div className="flex items-center justify-center">
