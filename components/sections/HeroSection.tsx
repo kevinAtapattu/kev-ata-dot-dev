@@ -3,11 +3,9 @@
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import { siteConfig } from "../../lib/config/site";
-import { useThemeToggle } from "../../lib/hooks/useThemeToggle";
+import Image from "next/image";
 
 export default function HeroSection() {
-  const { theme, toggle } = useThemeToggle();
-
   return (
     <section className="flex flex-col gap-8">
       <Badge>Currently: {siteConfig.location}</Badge>
@@ -16,19 +14,23 @@ export default function HeroSection() {
           <p className="text-sm uppercase tracking-[0.6em] text-white/60">{siteConfig.tagline}</p>
           <h1 className="text-5xl font-semibold">Hi, I'm Kevin Atapattu</h1>
           <p className="text-lg text-white/70">
-            Always: learning, building, & improving.
+            Software Engineer, Powerlifter, Caffeine Enthusiast.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button>View Work</Button>
             <Button variant="ghost">Resume</Button>
           </div>
         </div>
-        <div className="hidden min-h-[200px] flex-1 rounded-[40px] border border-white/5 bg-gradient-to-b from-white/10 to-white/0 p-6 sm:block">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/60">Theme</p>
-          <p className="text-3xl font-semibold">{theme}</p>
-          <Button className="mt-8" onClick={toggle}>
-            Toggle Theme
-          </Button>
+        <div className="flex items-center justify-center">
+          <div className="relative h-[120px] w-[120px] sm:h-[200px] sm:w-[200px] overflow-hidden rounded-full border-4 border-white/10">
+            <Image
+              src="/headshot.png"
+              alt="Kevin Atapattu"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
