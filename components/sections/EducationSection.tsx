@@ -4,7 +4,7 @@ import Image from "next/image";
 const education = [
   {
     date: "2022 - 2027",
-    degree: "Bachelor of Science in Computer Science (Co-op)",
+    degree: "Bachelor of Science in Computer Science",
     institution: "Carleton University",
     logo: "/logos/carleton-logo.png"
   }
