@@ -3,6 +3,7 @@ import ExperienceTimeline from "../components/sections/ExperienceTimeline";
 import EducationSection from "../components/sections/EducationSection";
 import ProjectGrid from "../components/sections/ProjectGrid";
 import ContactForm from "../components/sections/ContactForm";
+import SocialDock from "../components/sections/SocialDock";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <EducationSection />
       <ProjectGrid />
       <ContactForm />
+      <SocialDock />
     </main>
   );
 }

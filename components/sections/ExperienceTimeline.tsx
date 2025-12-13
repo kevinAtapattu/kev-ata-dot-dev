@@ -33,7 +33,7 @@ const timeline = [
   {
     date: "March 2020 - June 2022",
     role: "Web Developer & Founder",
-    company: "Okami Production",
+    company: "Okami Productions",
     logo: "/logos/okami-logo.png",
     description: [
       "Developed a dynamic portfolio website using React, JavaScript, HTML, and CSS to display video projects.",
