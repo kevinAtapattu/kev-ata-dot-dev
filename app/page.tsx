@@ -6,7 +6,7 @@ import ContactForm from "../components/sections/ContactForm";
 
 export default function HomePage() {
   return (
-    <main className="container mx-auto flex flex-col gap-20 px-4 py-16">
+    <main className="container mx-auto flex flex-col gap-20 px-4 py-16 max-w-5xl">
       <HeroSection />
       <ExperienceTimeline />
       <EducationSection />

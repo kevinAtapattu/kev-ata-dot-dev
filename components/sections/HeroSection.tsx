@@ -21,13 +21,13 @@ export default function HeroSection() {
             <Button as="a" href="/kevin_atapattu_resume.pdf" target="_blank" rel="noopener noreferrer" variant="ghost">Resume</Button>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-baseline justify-center">
           <div className="relative h-[120px] w-[120px] sm:h-[200px] sm:w-[200px] overflow-hidden rounded-full border-4 border-white/10">
             <Image
-              src="/headshot.png"
+              src="/ai-pl.jpeg"
               alt="Kevin Atapattu"
               fill
-              className="object-cover"
+              className="object-bottom object-cover scale-150 translate-y-5"
               priority
             />
           </div>
