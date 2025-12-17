@@ -2,20 +2,18 @@ import { type Project } from "../models/project";
 
 const fallbackProjects: Project[] = [
   {
-    slug: "motion-dashboard",
-    title: "Motion Dashboard",
-    summary: "Realtime analytics surface with smooth motion primitives and live data feed.",
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
-    repoUrl: "https://github.com/kevin/motion-dashboard",
-    liveUrl: "https://motion-dashboard.example.com"
+    slug: "ilift",
+    title: "iOS Powerlifting App",
+    summary: "Engineered a Swift app tailored for powerlifters to optimize workouts with features like plate conversion and logs.",
+    tech: ["Swift", "Supabase"],
+    repoUrl: "https://github.com/kevinAtapattu/PwrLft",
   },
   {
-    slug: "neon-portfolio",
-    title: "Neon Portfolio",
-    summary: "Interactive, dark, neon portfolio concept highlighting experimental UX.",
-    tech: ["React", "Framer Motion", "Three.js"],
-    repoUrl: "https://github.com/kevin/neon-portfolio",
-    liveUrl: "https://neon-portfolio.example.com"
+    slug: "smartcoach",
+    title: "Coach with Machine Learning",
+    summary: "Led a team of engineers to develop a reinforcement learning agent to create & optimize a powerlifting program.",
+    tech: ["Python", "JSON"],
+    repoUrl: "https://github.com/kevinAtapattu",
   }
 ];
 
