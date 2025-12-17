@@ -5,6 +5,7 @@ export const siteConfig = {
   socials: {
     github: "https://github.com/kevinAtapattu",
     linkedin: "https://www.linkedin.com/in/kevinatapattu/",
-    email: "kevinatapattu@gmail.com"
+    email: "kevinatapattu@gmail.com",
+    resume: "/kevin_atapattu_resume.pdf"
   }
 };
