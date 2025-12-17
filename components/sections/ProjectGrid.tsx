@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import ScrollReveal from "../ui/ScrollReveal";
 import { getFeaturedProjects } from "../../lib/services/projects";
 import {
   SiPython,
@@ -22,12 +23,15 @@ export default async function ProjectGrid() {
 
   return (
     <section className="flex flex-col gap-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-semibold">Featured Work</h2>
-      </div>
+      <ScrollReveal>
+        <div className="flex items-center justify-between">
+          <h2 className="text-3xl font-semibold">Featured Work</h2>
+        </div>
+      </ScrollReveal>
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
-          <Card key={project.slug} className="flex flex-col gap-4 relative">
+        {projects.map((project, index) => (
+          <ScrollReveal key={project.slug} delay={index * 100}>
+            <Card className="flex flex-col gap-4 relative h-full">
             <a
               href={project.repoUrl}
               target="_blank"
@@ -56,7 +60,8 @@ export default async function ProjectGrid() {
                 );
               })}
             </div>
-          </Card>
+            </Card>
+          </ScrollReveal>
         ))}
       </div>
     </section>

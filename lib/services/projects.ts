@@ -10,7 +10,7 @@ const fallbackProjects: Project[] = [
   },
   {
     slug: "smartcoach",
-    title: "Coach with Machine Learning",
+    title: "Coach with Reinforcement Learning",
     summary: "Led a team of engineers to develop a reinforcement learning agent to create & optimize a powerlifting program.",
     tech: ["Python", "JSON"],
     repoUrl: "https://github.com/kevinAtapattu",
