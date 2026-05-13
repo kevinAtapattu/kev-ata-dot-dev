@@ -1,29 +1,29 @@
-import Button from "../ui/Button";
-import Card from "../ui/Card";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 
 export default function ContactForm() {
   return (
-    <section className="flex flex-col gap-6">
-      <h2 className="text-3xl font-semibold">Let's Collaborate</h2>
-      <Card>
-        <form className="flex flex-col gap-4">
-          <label className="flex flex-col gap-2 text-sm">
-            Name
-            <input className="rounded-full bg-black/30 px-4 py-3" placeholder="Your name" />
-          </label>
-          <label className="flex flex-col gap-2 text-sm">
-            Email
-            <input className="rounded-full bg-black/30 px-4 py-3" type="email" placeholder="you@domain.com" />
-          </label>
-          <label className="flex flex-col gap-2 text-sm">
-            Project Vision
-            <textarea className="rounded-3xl bg-black/30 px-4 py-3" rows={4} placeholder="Describe the impact you're after" />
-          </label>
-          <Button type="submit" className="self-start">
-            Send Message
-          </Button>
-        </form>
-      </Card>
-    </section>
+    <footer className="flex flex-col items-center gap-6 border-t border-white/10 pt-12">
+      <div className="flex gap-6">
+        <a
+          href="https://linkedin.com/in/KevinAtapattu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/60 hover:text-white transition-colors"
+          aria-label="LinkedIn"
+        >
+          <SiLinkedin className="w-6 h-6" />
+        </a>
+        <a
+          href="https://github.com/kevinAtapattu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/60 hover:text-white transition-colors"
+          aria-label="GitHub"
+        >
+          <SiGithub className="w-6 h-6" />
+        </a>
+      </div>
+      <p className="text-sm text-white/40">© 2025 Kevin Atapattu</p>
+    </footer>
   );
 }

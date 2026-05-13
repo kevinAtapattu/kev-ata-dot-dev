@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Card from "../ui/Card";
+import ScrollReveal from "../ui/ScrollReveal";
 import Image from "next/image";
 
 const timeline = [
@@ -115,10 +116,14 @@ function ExperienceCard({ item }: { item: typeof timeline[0] }) {
 export default function ExperienceTimeline() {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-3xl font-semibold">Experience</h2>
+      <ScrollReveal>
+        <h2 className="text-3xl font-semibold">Experience</h2>
+      </ScrollReveal>
       <div className="space-y-4">
-        {timeline.map((item) => (
-          <ExperienceCard key={item.company} item={item} />
+        {timeline.map((item, index) => (
+          <ScrollReveal key={item.company} delay={index * 100}>
+            <ExperienceCard item={item} />
+          </ScrollReveal>
         ))}
       </div>
     </section>
