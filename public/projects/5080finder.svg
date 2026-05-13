@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 168" preserveAspectRatio="xMidYMid slice" role="img" aria-label="5080Finder GPU stock scanner log">
+  <!-- Background -->
+  <rect width="400" height="168" fill="#0c0d12"/>
+
+  <defs>
+    <radialGradient id="finderGlow" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#1a1d28" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0c0d12" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="168" fill="url(#finderGlow)"/>
+
+  <!-- Terminal chrome -->
+  <rect x="0" y="0" width="400" height="22" fill="#15171f"/>
+  <circle cx="12" cy="11" r="2.8" fill="#3a3d4a"/>
+  <circle cx="22" cy="11" r="2.8" fill="#3a3d4a"/>
+  <circle cx="32" cy="11" r="2.8" fill="#3a3d4a"/>
+  <text x="200" y="14" text-anchor="middle" font-size="7.5" fill="rgba(255,255,255,0.5)" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.4">5080finder.py · scanning</text>
+
+  <!-- Log lines -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="9">
+    <text x="14" y="40" fill="rgba(255,255,255,0.85)">
+      <tspan fill="#2997ff">$</tspan> python 5080finder.py
+    </text>
+    <text x="14" y="56" fill="rgba(255,255,255,0.45)">[14:23:01] scanning retailers...</text>
+    <text x="14" y="72" fill="rgba(255,255,255,0.7)">[14:23:02] Best Buy   <tspan fill="#7a7a7a">→ checking</tspan></text>
+    <text x="14" y="88" fill="rgba(255,255,255,0.7)">[14:23:03] Amazon     <tspan fill="#ff6b6b">✗ out of stock</tspan></text>
+    <text x="14" y="104" fill="rgba(255,255,255,0.7)">[14:23:03] Newegg     <tspan fill="#ff6b6b">✗ out of stock</tspan></text>
+    <text x="14" y="120" fill="rgba(255,255,255,0.9)" font-weight="600">[14:23:04] NVIDIA     <tspan fill="#1f8a5b">✓ IN STOCK</tspan></text>
+    <text x="14" y="136" fill="#2997ff" font-weight="600">[14:23:04] → alert sent ✉</text>
+    <text x="14" y="154" fill="rgba(255,255,255,0.85)">
+      <tspan fill="#2997ff">$</tspan> <tspan fill="rgba(255,255,255,0.9)">_</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 168" preserveAspectRatio="xMidYMid slice" role="img" aria-label="PwrLft lift tracker preview">
+  <!-- Background -->
+  <rect width="400" height="168" fill="#0c0d12"/>
+
+  <defs>
+    <radialGradient id="pwrGlow" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#1a1d28" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0c0d12" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="168" fill="url(#pwrGlow)"/>
+
+  <!-- Header -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif">
+    <text x="16" y="22" font-size="8" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="0.6">PWRLFT</text>
+    <text x="63" y="22" font-size="8" fill="rgba(255,255,255,0.55)" letter-spacing="0.6">· COMPETITION PRS</text>
+    <circle cx="382" cy="19" r="3" fill="#2997ff"/>
+    <text x="354" y="22" text-anchor="end" font-size="7" fill="rgba(255,255,255,0.55)" letter-spacing="0.6">CANPL</text>
+  </g>
+
+  <!-- Three lift cards -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif">
+    <!-- Squat -->
+    <g transform="translate(16, 40)">
+      <rect width="116" height="110" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="12" y="20" font-size="8" font-weight="600" fill="#2997ff" letter-spacing="0.5">SQUAT</text>
+      <text x="12" y="60" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="-1.2">485</text>
+      <text x="78" y="60" font-size="11" fill="rgba(255,255,255,0.45)" font-weight="400">lb</text>
+      <text x="12" y="76" font-size="7" fill="rgba(255,255,255,0.4)" letter-spacing="0.3">5 × 3 @ 405</text>
+      <path d="M 12,98 L 28,94 L 44,90 L 60,84 L 76,80 L 92,76 L 104,72" fill="none" stroke="#2997ff" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+      <circle cx="104" cy="72" r="2" fill="#2997ff"/>
+    </g>
+
+    <!-- Bench -->
+    <g transform="translate(142, 40)">
+      <rect width="116" height="110" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="12" y="20" font-size="8" font-weight="600" fill="#2997ff" letter-spacing="0.5">BENCH</text>
+      <text x="12" y="60" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="-1.2">315</text>
+      <text x="78" y="60" font-size="11" fill="rgba(255,255,255,0.45)" font-weight="400">lb</text>
+      <text x="12" y="76" font-size="7" fill="rgba(255,255,255,0.4)" letter-spacing="0.3">5 × 5 @ 245</text>
+      <path d="M 12,98 L 28,96 L 44,92 L 60,90 L 76,86 L 92,82 L 104,80" fill="none" stroke="#2997ff" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+      <circle cx="104" cy="80" r="2" fill="#2997ff"/>
+    </g>
+
+    <!-- Deadlift -->
+    <g transform="translate(268, 40)">
+      <rect width="116" height="110" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="12" y="20" font-size="8" font-weight="600" fill="#2997ff" letter-spacing="0.5">DEADLIFT</text>
+      <text x="12" y="60" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="-1.2">600</text>
+      <text x="78" y="60" font-size="11" fill="rgba(255,255,255,0.45)" font-weight="400">lb</text>
+      <text x="12" y="76" font-size="7" fill="rgba(255,255,255,0.4)" letter-spacing="0.3">3 × 2 @ 495</text>
+      <path d="M 12,98 L 28,92 L 44,90 L 60,84 L 76,78 L 92,72 L 104,66" fill="none" stroke="#2997ff" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+      <circle cx="104" cy="66" r="2" fill="#2997ff"/>
+    </g>
+  </g>
+</svg>

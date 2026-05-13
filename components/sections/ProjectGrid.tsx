@@ -1,33 +1,73 @@
-import Card from "../ui/Card";
-import Button from "../ui/Button";
+import Image from "next/image";
 import { getFeaturedProjects } from "../../lib/services/projects";
 
 export default async function ProjectGrid() {
   const projects = await getFeaturedProjects();
 
   return (
-    <section className="flex flex-col gap-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-semibold">Featured Work</h2>
-        <Button variant="ghost">View GitHub</Button>
-      </div>
-      <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
-          <Card key={project.slug} className="flex flex-col gap-4">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-white/50">{project.slug}</p>
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
-            </div>
-            <p className="text-white/70">{project.summary}</p>
-            <div className="flex flex-wrap gap-2 text-xs text-white/60">
-              {project.tech.map((stack) => (
-                <span key={stack} className="rounded-full border border-white/10 px-2 py-1">
-                  {stack}
-                </span>
-              ))}
-            </div>
-          </Card>
-        ))}
+    <section id="projects" className="work">
+      <div className="work__inner">
+        <div className="work__head reveal">
+          <div>
+            <h2>Featured projects.</h2>
+            <p className="sub">
+              Cherry-picked builds. Cinematic motion, real data, shipped.
+            </p>
+          </div>
+          <a
+            href="https://github.com/kevinAtapattu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="work-card__link"
+            style={{ padding: "8px 0" }}
+          >
+            View everything on GitHub
+          </a>
+        </div>
+
+        <div className="work__grid">
+          {projects.map((project, i) => (
+            <a
+              key={project.slug}
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`work-card reveal reveal--delay-${(i % 3) + 1}`}
+            >
+              <div
+                className="work-card__thumb"
+                style={project.thumbnail ? { background: "#0c0d12" } : undefined}
+              >
+                {project.thumbnail ? (
+                  <Image
+                    src={project.thumbnail}
+                    alt={`${project.title} preview`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1068px) 50vw, 33vw"
+                    style={{ objectFit: "fill" }}
+                  />
+                ) : (
+                  <div className="thumb-pattern">
+                    <div className="thumb-pattern__glyph">{project.glyph}</div>
+                    <div className="thumb-pattern__chip">{project.tech[0]}</div>
+                  </div>
+                )}
+              </div>
+
+              <div className="work-card__category">{project.category}</div>
+              <h3 className="work-card__name">{project.title}</h3>
+              <p className="work-card__summary">{project.summary}</p>
+
+              <div className="work-card__tags">
+                {project.tech.map((tag) => (
+                  <span key={tag} className="work-card__tag">{tag}</span>
+                ))}
+              </div>
+
+              <span className="work-card__link">View on GitHub</span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

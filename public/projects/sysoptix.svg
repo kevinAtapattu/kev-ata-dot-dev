@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 168" preserveAspectRatio="xMidYMid slice" role="img" aria-label="SysOptix monitoring dashboard preview">
+  <!-- Background -->
+  <rect width="400" height="168" fill="#0c0d12"/>
+
+  <!-- Subtle radial highlight -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1a1d28" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0c0d12" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cpuFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2997ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2997ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="168" fill="url(#glow)"/>
+
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="0" y1="48"  x2="400" y2="48"/>
+    <line x1="0" y1="84"  x2="400" y2="84"/>
+    <line x1="0" y1="120" x2="400" y2="120"/>
+  </g>
+
+  <!-- Header strip -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.55)" letter-spacing="0.6">
+    <text x="16" y="22" font-weight="600" fill="rgba(255,255,255,0.85)">SYSOPTIX</text>
+    <text x="74" y="22">· LIVE METRICS</text>
+    <circle cx="380" cy="19" r="3" fill="#1f8a5b"/>
+    <text x="350" y="22" text-anchor="end">ONLINE</text>
+  </g>
+
+  <!-- CPU area fill -->
+  <path d="M 16,70 L 50,62 L 84,74 L 118,52 L 152,60 L 186,44 L 220,58 L 254,40 L 288,52 L 322,34 L 356,46 L 384,40 L 384,168 L 16,168 Z"
+        fill="url(#cpuFill)"/>
+
+  <!-- CPU trace (blue) -->
+  <path d="M 16,70 L 50,62 L 84,74 L 118,52 L 152,60 L 186,44 L 220,58 L 254,40 L 288,52 L 322,34 L 356,46 L 384,40"
+        fill="none" stroke="#2997ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Memory trace (green) -->
+  <path d="M 16,108 L 50,104 L 84,98 L 118,102 L 152,90 L 186,96 L 220,84 L 254,90 L 288,78 L 322,86 L 356,76 L 384,80"
+        fill="none" stroke="#1f8a5b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- GPU trace (warm) -->
+  <path d="M 16,140 L 50,134 L 84,142 L 118,128 L 152,138 L 186,124 L 220,134 L 254,118 L 288,128 L 322,114 L 356,124 L 384,116"
+        fill="none" stroke="#ff9f0a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+  <!-- Endpoint dots -->
+  <circle cx="384" cy="40"  r="2.5" fill="#2997ff"/>
+  <circle cx="384" cy="80"  r="2.5" fill="#1f8a5b"/>
+  <circle cx="384" cy="116" r="2.5" fill="#ff9f0a"/>
+
+  <!-- Legend -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.6)">
+    <g transform="translate(16,150)">
+      <rect x="0" y="-5" width="6" height="2" fill="#2997ff"/>
+      <text x="10" y="-2">CPU 78%</text>
+    </g>
+    <g transform="translate(78,150)">
+      <rect x="0" y="-5" width="6" height="2" fill="#1f8a5b"/>
+      <text x="10" y="-2">MEM 64%</text>
+    </g>
+    <g transform="translate(140,150)">
+      <rect x="0" y="-5" width="6" height="2" fill="#ff9f0a"/>
+      <text x="10" y="-2">GPU 92%</text>
+    </g>
+  </g>
+</svg>

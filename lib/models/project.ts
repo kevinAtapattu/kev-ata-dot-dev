@@ -5,4 +5,7 @@ export interface Project {
   tech: string[];
   repoUrl: string;
   liveUrl?: string;
+  category: string;
+  glyph: string;
+  thumbnail?: string;
 }

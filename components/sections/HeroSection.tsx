@@ -1,38 +1,73 @@
 "use client";
 
-import Badge from "../ui/Badge";
-import { siteConfig } from "../../lib/config/site";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+
+function scrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 44;
+  window.scrollTo({ top, behavior: "smooth" });
+}
 
 export default function HeroSection() {
+  const portraitRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const el = portraitRef.current;
+      if (!el) return;
+      const y = window.scrollY;
+      const offset = Math.min(y * 0.18, 120);
+      const scale = 1 + Math.min(y * 0.0003, 0.06);
+      el.style.transform = `translate3d(0, ${offset}px, 0) scale(${scale})`;
+      el.style.opacity = String(Math.max(0, 1 - y * 0.0018));
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <section className="flex flex-col gap-8">
-      <Badge>Currently: {siteConfig.location}</Badge>
-      <div className="flex items-center justify-between gap-6">
-        <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.6em] text-white/60">{siteConfig.tagline}</p>
-          <h1 className="text-5xl font-semibold">Hi, I'm Kevin Atapattu</h1>
-          <p className="text-lg text-white/70">
-            Software Engineer, Powerlifter, Caffeine Enthusiast.
-          </p>
-          <p className="text-base text-white/60 max-w-2xl">
-            I'm a CS student at Carleton University, currently building enterprise experiences at IBM with previous
-            stints at ANVIL and my own media production startup in mainstream entertainment. Away from the developing, I'm a
-            competitive CANPL powerlifter. I'm always chasing heavier numbers with the same discipline and obsession I bring
-            to all aspects of my life.
-          </p>
-        </div>
-        <div className="flex items-baseline justify-center">
-          <div className="relative h-[120px] w-[120px] sm:h-[200px] sm:w-[200px] overflow-hidden rounded-full border-4 border-white/10">
-            <Image
-              src="/ai-pl.jpeg"
-              alt="Kevin Atapattu"
-              fill
-              className="object-bottom object-cover scale-150 translate-y-5"
-              priority
-            />
-          </div>
-        </div>
+    <section id="top" className="tile tile--black hero">
+      <div className="hero__eyebrow reveal">Engineer · Lifter · Builder</div>
+
+      <h1 className="reveal reveal--delay-1">
+        Hi, I&apos;m Kevin.
+        <br />
+        <em>Building goated products</em>
+        <br />
+        <em>with discipline and intent.</em>
+      </h1>
+
+      <p className="hero__tag reveal reveal--delay-2">
+        Pro. Personal. Beyond the bar.
+      </p>
+
+      <div className="hero__cta-row reveal reveal--delay-3">
+        <a
+          href="#work"
+          className="hero__pill-primary"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToId("work");
+          }}
+        >
+          See my work
+        </a>
+        <a href="mailto:kevinatapattu@gmail.com" className="hero__pill-secondary">
+          Get in touch ›
+        </a>
+      </div>
+
+      <div ref={portraitRef} className="hero__portrait reveal reveal--delay-4">
+        <Image
+          src="/ai-pl.jpeg"
+          alt="Kevin Atapattu"
+          fill
+          className="object-cover"
+          style={{ objectPosition: "50% 30%" }}
+          priority
+        />
       </div>
     </section>
   );
